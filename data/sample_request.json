@@ -1,0 +1,14 @@
+{
+  "features": {
+    "p055_transit_delay_risk_scorer_trip_distance_km": 0.0,
+    "p055_transit_delay_risk_scorer_congestion_index": 0.0,
+    "p055_transit_delay_risk_scorer_avg_speed_kmh": 0.0,
+    "p055_transit_delay_risk_scorer_stop_count": 0.0,
+    "p055_transit_delay_risk_scorer_fuel_efficiency": 0.0,
+    "p055_transit_delay_risk_scorer_vehicle_age_years": 0.0,
+    "p055_transit_delay_risk_scorer_rain_intensity": 0.0,
+    "p055_transit_delay_risk_scorer_route_grade_pct": 0.0,
+    "p055_transit_delay_risk_scorer_driver_hours": 0.0,
+    "p055_transit_delay_risk_scorer_passenger_count": 0.0
+  }
+}

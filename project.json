@@ -1,0 +1,54 @@
+{
+  "id": "055",
+  "slug": "055-transit-delay-risk-scorer",
+  "name": "Transit Delay Risk Scorer",
+  "domain": "Transportation & mobility",
+  "domain_slug": "mobility",
+  "task_type": "classification",
+  "target": "p055_transit_delay_risk_scorer_outcome_label",
+  "features": [
+    "p055_transit_delay_risk_scorer_trip_distance_km",
+    "p055_transit_delay_risk_scorer_congestion_index",
+    "p055_transit_delay_risk_scorer_avg_speed_kmh",
+    "p055_transit_delay_risk_scorer_stop_count",
+    "p055_transit_delay_risk_scorer_fuel_efficiency",
+    "p055_transit_delay_risk_scorer_vehicle_age_years",
+    "p055_transit_delay_risk_scorer_rain_intensity",
+    "p055_transit_delay_risk_scorer_route_grade_pct",
+    "p055_transit_delay_risk_scorer_driver_hours",
+    "p055_transit_delay_risk_scorer_passenger_count"
+  ],
+  "model_key": "support-vector-machine",
+  "model_class": "SVC",
+  "serving": "CLI",
+  "extension_focus": "Ray distributed training",
+  "seed": 202655,
+  "rows": 456840,
+  "dataset_bytes": 39745773,
+  "model_training": {
+    "source": "synthetic dataset bundled with this project",
+    "sample_rows": 5000,
+    "fit_rows": 4000,
+    "holdout_rows": 1000,
+    "metrics": {
+      "accuracy": 0.929,
+      "macro_f1": 0.929,
+      "roc_auc": 0.9869
+    },
+    "artifact": "models/model.joblib"
+  },
+  "gui_feature": {
+    "mode": "history",
+    "title": "Transit Delay Risk Scorer · Prediction history",
+    "description": "Keep a private browser-local history for this project and export it as JSON. This panel is tuned to Transit Delay Risk Scorer and its p055 transit delay risk scorer fuel efficiency signal.",
+    "focus_feature": "p055_transit_delay_risk_scorer_fuel_efficiency",
+    "mode_title": "Prediction history"
+  },
+  "gui": {
+    "frontend": "HTML/CSS/JavaScript",
+    "backend": "FastAPI",
+    "standalone": true
+  },
+  "model_artifact": "models/model.joblib",
+  "model_bytes": 107353
+}
